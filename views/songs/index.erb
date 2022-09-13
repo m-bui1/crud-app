@@ -1,0 +1,43 @@
+<h1>Lyric Hub</h1>
+
+<% if logged_in? %>
+    <h2>Welcome to Lyric Hub <%= current_user['first_name'] %> </h2>
+
+    <section class="controls">
+        <form action="/sessions" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <button>Logout</button>
+        </form>
+
+        <a href="/songs/new">Add Song</a>
+    </section>
+
+    <section class="songs">
+        <% songs.each do |song| %>
+            <section class="song">
+                <header>
+                    <h2> 
+                        <%= song['name']%> 
+                        <br>
+                        <%= song['artist']%>
+                    </h2>
+                    <section class="controls">
+                        <a href="/songs/<%= song['id'] %>/edit">Edit</a>
+
+                        <form action="/songs/<%= song['id'] %>" method="POST">
+                            <input type="hidden" name="_method" value="delete">
+                            <button>Delete</button>
+                        </form>
+                    </section>
+                </header>
+                <%= song['lyrics']%>
+            </section>
+        <% end %>
+    </section>
+
+<% else %>
+
+    <a href="/users/new">Sign up</a>
+    <a href="/sessions/new">Login</a>
+
+<% end %>
