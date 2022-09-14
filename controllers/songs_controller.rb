@@ -7,6 +7,23 @@ get '/' do
     }
 end
 
+get '/search' do
+    name = params['name']
+    p name
+    artist = params['artist']
+    song = current_song(name)
+    erb :'songs/search', locals: {
+        song: song
+    }
+end
+
+get '/all_songs' do
+    songs = all_songs()
+    erb :'songs/all_songs', locals: {
+        songs: songs
+    }
+  end
+
 get '/songs/new' do
     erb :'songs/new'
 end

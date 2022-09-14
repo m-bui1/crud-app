@@ -3,7 +3,6 @@ require 'bcrypt'
 require 'httparty'
 require './db/db'
 require 'dotenv/load'
-require 'lyrics_finder'
 
 enable :sessions
 

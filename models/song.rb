@@ -2,6 +2,10 @@ def all_songs
     run_sql("SELECT * FROM songs ORDER BY id")
 end
 
+def current_song(name)
+    run_sql("SELECT * FROM songs WHERE name LIKE $1", [name])
+end
+
 def create_song(name, artist, lyrics)
     run_sql("INSERT INTO (songs(name, artist, lyrics) VALUES($1, $2, $3)", [name, artist, lyrics])
 end
