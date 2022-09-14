@@ -1,14 +1,14 @@
 <h1>Lyric Hub</h1>
 
 <% if logged_in? %>
-    <h2>Welcome to Lyric Hub <%= current_user['first_name'] %> </h2>
+    <h2>Welcome to Lyric Hub! <%= current_user['first_name'] %> </h2>
     <section class="search">
         <h3>Search for Song</h3>
         <label for="">Title: </label>
-        <input type="text" name="name">
+        <input type="text" name='name'>
 
         <label for="">Artist: </label>
-        <input type="text" name="artist">
+        <input type="text" name='artist'>
 
         <a href="/search">Search</a>
 

@@ -1,6 +1,9 @@
+html{
+  background-image: url('https://media1.giphy.com/media/IeSXccYMz3K4U/giphy.gif?cid=ecf05e47c8aby79sslvl7glc1bm3s7na6otw1j4bg9uz7od0&rid=giphy.gif&ct=g');
+  background-size: 35% auto 
+}
 * {
     box-sizing: border-box;
-    background-color: grey;
   }
   
   body {
@@ -48,4 +51,18 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+  }
+
+  .audio div {
+    align-self: center;  
+  }
+  .lyrics {
+    border: 1px solid black;
+    background-color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    font-size: large;
+    padding: 20px;
+    opacity: .7;
   }

@@ -1,4 +1,4 @@
-<h1>Edit Food</h1>
+<h1>Edit Song</h1>
 <form action="/songs/<%= song['id'] %>" method="POST">
   <input type="hidden" name="_method" value="put">
 
@@ -8,5 +8,10 @@
   <label for="">Artist: </label>
   <input type="text" name="artist" value="<%= song['artist'] %>">
 
+  <label for="">Image: </label>
+  <input type="text" name="img_url" value="<%= song['img_url'] %>">
+
+  <label for="">Image: </label>
+  <input type="text" name="lyrics" value="<%= song['lyrics'] %>">
   <button>Update Song</button>
 </form>

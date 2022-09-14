@@ -1,5 +1,5 @@
 <% if logged_in? %>
-    <h2>Welcome to Lyric Hub <%= current_user['first_name'] %> </h2>
+    <h2>Welcome to Lyric Hub! <%= current_user['first_name'] %> </h2>
 
     <section class="controls">
         <form action="/sessions" method="POST">
@@ -8,6 +8,7 @@
         </form>
 
         <a href="/songs/new">Add Song</a>
+        <a href="/">Return to search</a>
     </section>
 
     <section class="songs">
@@ -20,17 +21,22 @@
                         <%= song['artist']%>
                     </h2>
                     <section class="controls">
+                        
+
                         <a href="/songs/<%= song['id'] %>/edit">Edit</a>
 
                         <form action="/songs/<%= song['id'] %>" method="POST">
                             <input type="hidden" name="_method" value="delete">
                             <button>Delete</button>
+
                         </form>
                     </section>
                 </header>
-                <%= song['lyrics']%>
+                <img src="<%= song['img_url']%>" alt="">
+                <a href="/songs/<%= song['id'] %>/lyrics">Lyrics</a>
+
             </section>
-            <a href="/">Return to search</a>
+            
         <% end %>
     </section>
 
