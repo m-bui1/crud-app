@@ -11,23 +11,24 @@
     </section>
 
     <section class="songs">
-        <% songs.each do |song| %>
+        <% song.each do |music| %>
             <section class="song">
                 <header>
                     <h2> 
-                        <%= song['name'] %> 
+                        <%= music['name'] %> 
                         <br>                   
-                        <%= songs %>
+                        <%= music['artist'] %>
 
                     </h2>
                     <section class="controls">
 
                     </section>
                 </header>
-                <%= song['lyrics']%>
+                <%= music['lyrics']%>
+                <% end %>
             </section>
             <a href="/">Return to search</a>
-        <% end %>
+        
     </section>
 
     <% else %>

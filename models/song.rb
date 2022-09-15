@@ -6,8 +6,8 @@ def current_song(name)
     run_sql("SELECT * FROM songs WHERE name LIKE $1", [name])
 end
 
-def create_song(name, artist, lyrics)
-    run_sql("INSERT INTO (songs(name, artist, lyrics) VALUES($1, $2, $3)", [name, artist, lyrics])
+def create_song(name, artist, lyrics, img_url)
+    run_sql("INSERT INTO songs(name, artist, lyrics) VALUES($1, $2, $3, $4)", [name, artist, lyrics, img_url])
 end
 
 def get_song(id)
@@ -20,4 +20,8 @@ end
 
 def delete_song(id)
     run_sql("DELETE FROM songs WHERE id = $1", [id])
+end
+
+def search_song(name)
+    run_sql("SELECT * FROM songs WHERE name ILIKE $1", [name])
 end

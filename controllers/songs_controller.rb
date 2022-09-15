@@ -23,7 +23,8 @@ post '/songs' do
     name = params['name']
     artist = params['artist']
     lyrics = params['lyrics']
-    
+    create_song(name, artist, lyrics)
+
     redirect '/'
 end
 
@@ -61,4 +62,12 @@ delete '/songs/:id' do
 
     delete_song(id)
     redirect '/'
+end
+
+get '/search' do
+    name = params['name']
+    song = search_song(name)
+    erb :'songs/search', locals:{
+        song: song
+    }
 end
