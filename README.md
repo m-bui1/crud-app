@@ -1,7 +1,7 @@
 # Lyric Hub App
 A Ruby Sinatra Music app, where users can store songs as well as see lyrics
-[main page](https://i.imgur.com/l7nf746.png)
-[searchpage](https://i.imgur.com/6QVYs94.png)
+![main page](https://i.imgur.com/l7nf746.png)
+![searchpage](https://i.imgur.com/6QVYs94.png)
 
 ## :computer: [Click here](https://calm-citadel-69842.herokuapp.com/) to see my live project!
 
