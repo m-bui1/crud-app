@@ -1,10 +1,18 @@
 <h1>Lyrics</h1>
-  <div><audio class="audio" src="/<%=song['name']%>.mp3" 
-  preload="auto"
-  controls>	
-</audio></div>
+  <div>
+    <audio controls>
+     <source src="/songs/<%=song['name']%>.mp3" 
+      <%# preload="auto" %>
+      
+      type="audio/mpeg">	
+    </audio>
+  </div>
+
     <div class="lyrics">
         <%= song['lyrics']%>
+        <br>
+        <a href="/all_songs">Show All Songs</a>
     </div>
-  <a href="/all_songs">Show All Songs</a>
+
+
 </form>

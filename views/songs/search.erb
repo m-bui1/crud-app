@@ -10,11 +10,21 @@
         <a href="/songs/new">Add Song</a>
     </section>
 
+<div class="lyrics">
     <section class="songs">
         <% song.each do |music| %>
-            <section class="song">
+          <div>
+            <audio controls>
+            <source src="/songs/<%=music['name']%>.mp3" 
+            <%# preload="auto" %>
+            
+            type="audio/mpeg">	
+            </audio>
+        </div>
+
+            <section class="search">
                 <header>
-                    <h2> 
+                    <h2 class="search"> 
                         <%= music['name'] %> 
                         <br>                   
                         <%= music['artist'] %>
@@ -30,7 +40,7 @@
             <a href="/">Return to search</a>
         
     </section>
-
+</div>
     <% else %>
 
         <a href="/users/new">Sign up</a>
