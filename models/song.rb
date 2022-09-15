@@ -7,7 +7,7 @@ def current_song(name)
 end
 
 def create_song(name, artist, lyrics, img_url)
-    run_sql("INSERT INTO songs(name, artist, lyrics) VALUES($1, $2, $3, $4)", [name, artist, lyrics, img_url])
+    run_sql("INSERT INTO songs(name, artist, lyrics, img_url) VALUES($1, $2, $3, $4)", [name, artist, lyrics, img_url])
 end
 
 def get_song(id)

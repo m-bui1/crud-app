@@ -23,7 +23,8 @@ post '/songs' do
     name = params['name']
     artist = params['artist']
     lyrics = params['lyrics']
-    create_song(name, artist, lyrics)
+    img_url = params['img_url']
+    create_song(name, artist, lyrics, img_url)
 
     redirect '/'
 end
