@@ -1,5 +1,5 @@
 # Lyric Hub App
-The briefest description of my cool project and why you should all use it.
+A Ruby Sinatra Music app, where users can store songs as well as see lyrics
 
 ## :computer: [Click here](https://calm-citadel-69842.herokuapp.com/) to see my live project!
 
@@ -19,9 +19,11 @@ The briefest description of my cool project and why you should all use it.
 - HTML
 - CSS
 - Ruby
+- Sinatra
 
 ## :sob: Lessons learnt
 - Spend more time planning CSS layouts
 
 ## :white_check_mark: Future features
 Possible API for lyrics searcher
+Playlist function
