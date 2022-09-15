@@ -12,7 +12,7 @@ A Ruby Sinatra Music app, where users can store songs as well as see lyrics
 ## :pencil2: Planning & Problem Solving
 - Used Trello to form a base plan of approach
 - Add screenshots/drawings of doodles/plans during the planning phase.
-![Wireframing](https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
+![Wireframing](https://i.imgur.com/mUfEE10.png)
 
 ## :rocket: Cool tech
 - Programming languages
@@ -23,6 +23,7 @@ A Ruby Sinatra Music app, where users can store songs as well as see lyrics
 
 ## :sob: Lessons learnt
 - Spend more time planning CSS layouts
+![Error Point](https://i.imgur.com/Dbs8dFU.png)
 
 ## :white_check_mark: Future features
 Possible API for lyrics searcher
